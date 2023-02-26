@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logline", "Logline\Logline.csproj", "{32FBE203-A04A-4D05-B3BC-A6C42BB98E82}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogLineTests", "LogLineTests\LogLineTests.csproj", "{47778801-B362-4140-A942-0AEE69A1404B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{32FBE203-A04A-4D05-B3BC-A6C42BB98E82} = {32FBE203-A04A-4D05-B3BC-A6C42BB98E82}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A74510D9-ECDF-4B47-9D97-2497F9D45F04}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32FBE203-A04A-4D05-B3BC-A6C42BB98E82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32FBE203-A04A-4D05-B3BC-A6C42BB98E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32FBE203-A04A-4D05-B3BC-A6C42BB98E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32FBE203-A04A-4D05-B3BC-A6C42BB98E82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47778801-B362-4140-A942-0AEE69A1404B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47778801-B362-4140-A942-0AEE69A1404B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47778801-B362-4140-A942-0AEE69A1404B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47778801-B362-4140-A942-0AEE69A1404B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7946A17A-236A-44AC-947D-5084B3A15011}
+	EndGlobalSection
+EndGlobal
