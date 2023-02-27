@@ -38,7 +38,16 @@ public class Gambler {
       // Game logic
       while (pot > 0 && pot < goal) {
         // TO DO - Implement game logic
-
+         bets++;
+         if(Math.random() < 0.5)
+         { 
+            pot++;
+         }
+         else
+         {
+            pot--;
+         }
+         
       }
       if (pot == goal) {
         gameWins++;
