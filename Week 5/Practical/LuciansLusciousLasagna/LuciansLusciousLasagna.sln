@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuciansLusciousLasagna", "LuciansLusciousLasagna\LuciansLusciousLasagna.csproj", "{50F4B9CF-C1B8-4CBE-A9EA-400E97B110AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuciansLusciousLasagnaTests", "LuciansLusciousLasagnaTests\LuciansLusciousLasagnaTests.csproj", "{6AC3D732-DF7B-4076-8595-8F45AEA030E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50F4B9CF-C1B8-4CBE-A9EA-400E97B110AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50F4B9CF-C1B8-4CBE-A9EA-400E97B110AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50F4B9CF-C1B8-4CBE-A9EA-400E97B110AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50F4B9CF-C1B8-4CBE-A9EA-400E97B110AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AC3D732-DF7B-4076-8595-8F45AEA030E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AC3D732-DF7B-4076-8595-8F45AEA030E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AC3D732-DF7B-4076-8595-8F45AEA030E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AC3D732-DF7B-4076-8595-8F45AEA030E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D2CD2E9-55B0-4221-A1B0-563B161DAF4E}
+	EndGlobalSection
+EndGlobal

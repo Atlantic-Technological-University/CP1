@@ -58,7 +58,8 @@ Console.WriteLine("The value of autorhName is {0}", authorName);
 Console.WriteLine("The value of refernceToAuthor is {0}", refernceToAuthor);
 
 
-// Examples of implicit type variables
+// Examples of implicit var type variables
+// See: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables
 
 Console.WriteLine("\n\nExamples of var and implicit types");
 

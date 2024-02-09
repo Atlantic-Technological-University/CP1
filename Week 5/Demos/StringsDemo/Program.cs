@@ -15,7 +15,7 @@ string phoneNumber = "(555) 983-32432";
 string grinningEmoji = char.ConvertFromUtf32(0x1F600);
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-Console.WriteLine(grinningEmoji, firstName, lastName, phoneNumber);
+Console.WriteLine(grinningEmoji + " " + firstName + " " + lastName + " " + phoneNumber);
 
 // Verbatim string - we can include escape seqeuences
 string verbatimString = "\nShane\tWilson";
