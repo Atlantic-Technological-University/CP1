@@ -20,8 +20,18 @@ public class rotorEncryption
 
             for(char letter: msg.toCharArray())
             {
-                //Gets the index of where the msg character is on the alphabet and adds its rotor counterpart to encryptedMsg
-                encryptedMsg += rotors.get(i).charAt(alphabet.indexOf(letter));
+                if(alphabet.indexOf(letter) == -1)
+                {
+
+                    encryptedMsg += letter;
+
+                }
+                else{
+
+                    //Gets the index of where the msg character is on the alphabet and adds its rotor counterpart to encryptedMsg
+                    encryptedMsg += rotors.get(i).charAt(alphabet.indexOf(letter));
+
+                }
                 
             }
 
@@ -33,7 +43,7 @@ public class rotorEncryption
     public static void main(String[] args)
     {
         List<String> rotors = new ArrayList<String>();
-        String msg = "ABCD";
+        String msg = "ABCD, Testing";
         msg = msg.toUpperCase();
         //First Rotor Test
         rotors.add("BDFHJLCPRTXVZNYEIWGAKMUSQO");
