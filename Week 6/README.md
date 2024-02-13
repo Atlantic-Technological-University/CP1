@@ -1,6 +1,6 @@
-# Week 5  
+# Week 6  
 
-In week 5 of the module we start to learn the basics concepts of programming with C#.  
+In week 6 of the module we start to learn the basics concepts of programming with C#.  
 
 ## Directory content  
 
