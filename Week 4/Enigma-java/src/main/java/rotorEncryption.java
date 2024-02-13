@@ -33,11 +33,15 @@ public class rotorEncryption
     public static void main(String[] args)
     {
         List<String> rotors = new ArrayList<String>();
-        String msg = "A";
+        String msg = "ABCD";
+        msg = msg.toUpperCase();
+        //First Rotor Test
         rotors.add("BDFHJLCPRTXVZNYEIWGAKMUSQO");
         System.out.println("1 Rotors:"+testRotorEncrypt(msg, rotors));
+        //Second Rotor Test
         rotors.add("AJDKSIRUXBLHWTMCQGZNPYFVOE");
         System.out.println("2 Rotors:"+testRotorEncrypt(msg, rotors));
+        //Third Rotor Test
         rotors.add("EKMFLGDQVZNTOWYHXUSPAIBRCJ"); 
         System.out.println("3 Rotors:"+testRotorEncrypt(msg, rotors));
 
