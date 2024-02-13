@@ -14,7 +14,7 @@ public class Main {
         List<String> rotors = new ArrayList<String>();
         rotors.add("BDFHJLCPRTXVZNYEIWGAKMUSQO");
         rotors.add("AJDKSIRUXBLHWTMCQGZNPYFVOE");
-        rotors.add("EKMFLGDQVZNTOWYHXUSPAIBRCJ");
+        rotors.add("EKMFLGDQVZNTOWYHXUSPAIBRCJ");   
 
         // ToDO
         // Get a start message, encrypt it and then decrypt it
