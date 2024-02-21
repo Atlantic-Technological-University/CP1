@@ -2,6 +2,8 @@
  * Filename: Lasagna.cs
  * Description: A skeleton class for a C# practical exercise covering basic programming tasks
  * such as declaring variables, methods, returning data from methods. 
+ * 
+ * Excercise adapted from https://github.com/exercism/csharp/tree/main/exercises/concept/lucians-luscious-lasagna
  */
 
 
