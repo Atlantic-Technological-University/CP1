@@ -4,65 +4,70 @@
 
 
 // Examples of strings 
-Console.WriteLine("\n\nExamples of strings");
+Console.WriteLine("\nCommon string operations");
 
-string firstName = "Shane"; // assigning a literal string
-string lastName = "Wilson";
-string phoneNumber = "(555) 983-32432";
+//// String concatenation
 
+//string part1 = "Hello";
+//string part2 = " World";
+//Console.WriteLine(part1.ToLower() + part2.ToUpper());
 
-// assigning a string by converting a Unicode character
-string grinningEmoji = char.ConvertFromUtf32(0x1F600);
-Console.OutputEncoding = System.Text.Encoding.UTF8;
+////string part3 = string.Concat(part1, part2); // we could also do this
+////Console.WriteLine($"The concatenated string is \"{part3}\"");
+////Console.WriteLine($"The concatenated string is \"{string.Concat(part1, part2)}\"");
 
-Console.WriteLine(grinningEmoji + " " + firstName + " " + lastName + " " + phoneNumber);
+//// Formatting text as upper case and lower case - note the methods return copies of the original strings
+//Console.WriteLine(part1.ToLower() + part2.ToUpper());
 
-// Verbatim string - we can include escape seqeuences
-string verbatimString = "\nShane\tWilson";
-Console.WriteLine(verbatimString);
+//// Note the original strings are unchanged
+//Console.WriteLine("Original string varaibles: " + part1 + part2);
 
-// CS1009 error Unrecognised escape sequence
-// string filePath = "C:\trusted sources\datafiles\data.txt"; 
+// Substring and string length examples
+string message = "Quis custodiet ipsos custodes?";
 
-// use the '@' to declare a verbatim string
-string filePath = @"C:\trusted sources\datafiles\data.txt";
-Console.WriteLine(filePath);
-Console.WriteLine();
+// Get the length of the string message
+Console.WriteLine($"The message is \"{message}\"");
+Console.WriteLine($"The message {message} is {message.Length} characters long");
 
-// raw string literals
-string rawString = """
-                <person age "40">
-                    <first_name>Peter</first_name>
-                </person>
-                """;
-
-Console.WriteLine(rawString);
+// Get the substring from 4 to the end
+string subString1 = message.Substring(4);
+Console.WriteLine(subString1);
+// Get the substring starting at index 4 to the 10
+string subString2 = message.Substring(4, 10);
+Console.WriteLine(subString2);
 
 
-// String interpolation
-Console.WriteLine("\nUsing string interpolation");
+// Get the index of ipsos
+int index = message.IndexOf("ipsos");
+Console.WriteLine($"The first occurance of the word \"ipsos\" is at index {index}");
 
-var date = DateTime.Now;
+// Example of replace
+// Replace every sub-string "Quis" with "Who"
+string newMessage = message.Replace("Quis", "Who");
+Console.WriteLine(newMessage);
+// Replace every 's' with a '$'
+newMessage = message.Replace('s', '$');
+Console.WriteLine(newMessage);
 
-// We could use string composite formatting to output the date time
-Console.WriteLine(String.Format("The time is now {0:hh:mm}", date));
+// Example of splitting a string
+// Split the string using space ' ' as a delimiting character
+string[] subStrings = message.Split(' ');
+// Using a foreach loop to print out each sub string in the array
+foreach (string substring in subStrings)
+{
+    Console.WriteLine(substring);
+}
 
-// Or we could use string interpolation
-Console.WriteLine($"The current time is {date:HH:mm}");
 
 
+//string firstName = "Shane"; // assigning a literal string
+//string lastName = "Wilson";
+//string phoneNumber = "(555) 983-32432";
 
 
-// String / object reference type comparison
-Console.WriteLine("\nReference type comparison");
+//// assigning a string by converting a Unicode character
+//string grinningEmoji = char.ConvertFromUtf32(0x1F600);
+//Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-string s1 = "hello!";
-object obj1 = s1;
-object obj2 = s1;
-object obj3 = "hello";
-
-Console.WriteLine(s1 == obj1); // output: true
-Console.WriteLine(obj1 == obj2); // output: true
-Console.WriteLine(s1 == obj2); // output: true
-Console.WriteLine(s1 == obj3); // output: false
+//Console.WriteLine(grinningEmoji + " " + firstName + " " + lastName + " " + phoneNumber);
 

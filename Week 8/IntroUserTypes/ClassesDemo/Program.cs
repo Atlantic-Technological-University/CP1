@@ -28,3 +28,22 @@ Adult anotherAdult = new Adult("parent2", "parent2");
 
 Console.WriteLine(anotherAdult.ToString());
 
+// Checking for null values
+
+// Create a person with a null FirstName
+var nullPerson = new Person();
+
+// if(nullPerson.FirstName != null)
+// if(nullPerson.FirstName is not null)
+if(nullPerson is not null)
+{
+    string firstName = nullPerson.FirstName ?? "John Doe";
+    Console.WriteLine($"The new person is called {firstName}");
+}
+else
+{
+    Console.WriteLine($"I don't know what the new person is called!");
+}
+
+//int? length = nullPerson.FirstName?.Length ?? 3;
+//Console.WriteLine($"The new person is called {nullPerson.FirstName}");

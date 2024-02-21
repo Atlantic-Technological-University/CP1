@@ -4,26 +4,27 @@
 
 Console.WriteLine("Hello, World!");
 
-//Console.Write("Hello,");
-//Console.Write(" World!");
+Console.Write("Hello,");
+Console.Write(" World!");
 
-//Console.WriteLine("This is a string literal");
+Console.WriteLine("This is a string literal");
+Console.WriteLine("We can join two string literals" + " together.");
 
 int numberOfItems = 16;
+// Output a string and then number with two console.write statements
+//Console.Write("The number of items is: ");
+//Console.WriteLine(numberOfItems);
 
-Console.WriteLine(numberOfItems); // Simple output
 
-// Or convert the numberOfItems to a string and concatenate the strings together
-Console.WriteLine("Are you sure that you want to buy " + numberOfItems.ToString() + " oranges?"); 
+// Change the console encoding to UTF8
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+System.Console.Out.WriteLine("€");
 
-// Or we could use numbered positional arguments
-Console.WriteLine("Yes I need {0} oranges to make fresh orange juice", numberOfItems);
+decimal accountBalance = 352.64m;
+//Write the account balance out by converting to a string and concatenating the string 
+//Console.WriteLine("Your account balance is: €" + accountBalance.ToString());
+Console.WriteLine("Your account balance is: €" + accountBalance);
+Console.WriteLine("Your account balance is: €", accountBalance);
 
-// Or we could use an interpolated string
-Console.WriteLine($"Ah, {numberOfItems} oranges seemed like a lot!");
 
-// Print out multiple positional aruments
-int numberOfBags = 2;
-
-Console.WriteLine("If you are buying {0} oranges then you will need {1} bags", numberOfItems, numberOfBags);
 

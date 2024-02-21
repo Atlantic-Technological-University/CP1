@@ -2,6 +2,7 @@
 // The author licenses this file to you under the MIT license.
 // See the LICENSE file in the solution root for more information.
 
+
 namespace ClassesDemo
 {
     //[access modifier] - [class] - [identifier]
@@ -9,15 +10,15 @@ namespace ClassesDemo
     {
         public Person()
         {
-            FirstName = "Jane";
-            SecondName = "Doe";
+            //FirstName = "Jane";
+            //SecondName = "Doe";
         }
         public Person(string firstname, string secondname)
         {
             FirstName = firstname;
             SecondName = secondname;
         }
-        public string FirstName { get; set; } 
+        public string? FirstName { get; set; } 
         public string SecondName { get; set; }
     }
 

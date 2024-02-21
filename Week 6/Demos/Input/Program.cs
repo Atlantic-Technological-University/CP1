@@ -12,4 +12,10 @@ Console.WriteLine($"Great to hear that you are feeling {response} today");
 //string response = Console.ReadLine()!;
 Console.WriteLine($"Great to hear that you are feeling {response} today");
 
+Console.Write("How old are you? ");
+string age = Console.ReadLine();
 
+Console.WriteLine("So you are " + age + " years old");
+
+// We should really convert the string input to a number. We will cover converting between
+// C# types later in the course. 
