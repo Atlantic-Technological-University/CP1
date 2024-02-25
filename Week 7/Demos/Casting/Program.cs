@@ -23,6 +23,8 @@ Console.WriteLine($"The implicit cast from an int to double hasn't led to any lo
 int anotherIntegerNumber;
 double todaysTemperature = 8.24;
 
+anotherIntegerNumber = todaysTemperature;
+
 Console.WriteLine($"Today's temperature is {todaysTemperature}");
 Console.WriteLine($"Converting today's temperature to an integer value");
 anotherIntegerNumber = (int)todaysTemperature; // Need an explicit cast from double to int

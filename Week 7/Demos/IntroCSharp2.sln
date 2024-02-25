@@ -36,7 +36,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Converting", "Converting\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParseData", "ParseData\ParseData.csproj", "{089870F6-B863-4888-BAF6-07163A8A4E18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryCatch", "TryCatch\TryCatch.csproj", "{C024302D-F2AA-49DB-A850-170F7040931B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TryCatch", "TryCatch\TryCatch.csproj", "{C024302D-F2AA-49DB-A850-170F7040931B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToStringDemo", "ToStringDemo\ToStringDemo.csproj", "{DDE18C78-CA4C-415C-BBAC-8E6DD533A44B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassByReference", "PassByValueRef\PassByReference.csproj", "{F226CC19-95C2-40FD-ABFB-34FC667D3629}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,6 +108,14 @@ Global
 		{C024302D-F2AA-49DB-A850-170F7040931B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C024302D-F2AA-49DB-A850-170F7040931B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C024302D-F2AA-49DB-A850-170F7040931B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDE18C78-CA4C-415C-BBAC-8E6DD533A44B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE18C78-CA4C-415C-BBAC-8E6DD533A44B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE18C78-CA4C-415C-BBAC-8E6DD533A44B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE18C78-CA4C-415C-BBAC-8E6DD533A44B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F226CC19-95C2-40FD-ABFB-34FC667D3629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F226CC19-95C2-40FD-ABFB-34FC667D3629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F226CC19-95C2-40FD-ABFB-34FC667D3629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F226CC19-95C2-40FD-ABFB-34FC667D3629}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

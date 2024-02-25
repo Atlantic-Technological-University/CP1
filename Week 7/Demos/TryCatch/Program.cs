@@ -4,19 +4,38 @@
 
 // Simple example of using try catch
 
+try
+{
+    Console.WriteLine("We are going to raise an exception");
+    throw new Exception("Something bad happened!");
+}
+catch (Exception e)
+{
+    Console.WriteLine("An exception was raised");
+}
+finally
+{
+    // This is really optional
+    Console.WriteLine("Cleaning up");
+}
+
 int Area(int length, int width)
 {
     if (length <= 0 || width <= 0)
     {
+        // Detection of an error done in the function
         throw new ArgumentException("Arguments cannot be zero");
     }
     return length * width;
 
 }
 
+//int areaResult = Area(1, 0); // will cause an exception
+//Console.WriteLine(areaResult);
+// Handling of an error done in the calling code/function
 //try
 //{
-//    Console.Write("Please enter a value for lenght ");
+//    Console.Write("Please enter a value for length ");
 //    int length = int.Parse(Console.ReadLine()!);
 //    // It is possible for input to be null, so we add '!' the null forgiving operator to disable
 //    // the compiler warning. We should really check for null types in production ready code. 

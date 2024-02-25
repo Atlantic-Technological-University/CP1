@@ -12,15 +12,17 @@ Console.WriteLine($"The value of a aSimpleInt is {aSimpleInt}");
 
 
 // Examples of rounding of doubles when converting to integers in C#
-aSimpleInt = System.Convert.ToInt32(10.45);
-Console.WriteLine($"The value of a aSimpleInt is {aSimpleInt}");
+// Declare an array
+double[] temperatureValues = { 10.45, 10.5, 10.51 };
 
-aSimpleInt = System.Convert.ToInt32(10.5);
-Console.WriteLine($"The value of a aSimpleInt is {aSimpleInt}");
+foreach ( double value in temperatureValues )
+{
+    aSimpleInt = System.Convert.ToInt32(value);
+    Console.WriteLine($"The value: {value} was converted to int value: {aSimpleInt}");
+}
 
-aSimpleInt = System.Convert.ToInt32(10.51);
-Console.WriteLine($"The value of a aSimpleInt is {aSimpleInt}");
 
+//
 double roundedDouble = Math.Round(12.49, 0, MidpointRounding.ToPositiveInfinity);
 Console.WriteLine($"The value of roundedDouble after rounding ToEven is: {roundedDouble}");
 
@@ -28,17 +30,4 @@ Console.WriteLine($"The value of roundedDouble after rounding ToEven is: {rounde
 
 Console.WriteLine("\nExamples of converting common base types to string with ToString() method");
 
-int number = 15;
-Console.WriteLine(number.ToString());
 
-bool booleanFlag = false;
-Console.WriteLine(booleanFlag.ToString());
-
-float pi = (float)Math.PI;
-Console.WriteLine(pi.ToString());
-
-DateTime now = DateTime.Now;
-Console.WriteLine(now.ToString());
-
-object me = new object();
-Console.WriteLine(me.ToString());

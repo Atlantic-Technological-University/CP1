@@ -9,8 +9,13 @@
 using System.ComponentModel.Design;
 using System.Globalization;
 
-int age = int.Parse("23");
-Console.WriteLine(age);
+//int age = int.Parse("23");
+//Console.WriteLine(age);
+
+Console.Write("Please enter your age: ");
+string userAge = Console.ReadLine();
+int userAgeInt = Int32.Parse(userAge);
+Console.WriteLine(userAge);
 
 DateTime importantDate1 = DateTime.Parse("12/6/1945");
 // Is 12/6/45 12th of June or 6th of December?
@@ -30,6 +35,11 @@ Console.WriteLine(importantDate2);
 
 // We will encounter an error when we attempt to parse incorrect data
 // int number = int.Parse("c#"); // Results in a System.FormatException
+
+// Using TryParse - https://learn.microsoft.com/en-us/dotnet/api/system.int32.tryparse
+// Will attempt to convert a string to an int returns true if it works
+// int temp;
+// bool works = int.TryParse(selection, out temp);
 
 Console.WriteLine("\nShall we play a game?\n");
 Console.WriteLine("1. Falken's Maze\n2. Black Jack\n3. Gin Rummy\n4. Hearts\n5. Bridge");
