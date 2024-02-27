@@ -29,7 +29,8 @@ namespace BookingUpForBeauty
         /// Input: 25/07/2019 13:45:00
         /// Output: new DateTime(2019, 7, 25, 13, 45, 0)
         /// </summary>
-        /// <param name="appointmentDateDescription"></param>
+        /// <param name="appointmentDateDescription">A string description of the date in time
+        /// </param>
         /// <returns>A valid DateTime object.</returns>
         /// <exception cref="NotImplementedException"></exception>
         public static DateTime Schedule(string appointmentDateDescription)
@@ -44,8 +45,10 @@ namespace BookingUpForBeauty
         /// Input: (1999, 12, 31, 9, 0, 0
         /// Output: True
         /// </summary>
-        /// <param name="appointmentDate"></param>
-        /// <returns><c>bool</c></returns> true if the date is in the past otherwise false
+        /// <param name="appointmentDateDescription">A string description of the date in time
+        /// </param>
+        /// <returns>A <c>bool</c> true if the date is in the past otherwise false.
+        /// </returns> 
         /// <exception cref="NotImplementedException"></exception>
         public static bool HasPassed(DateTime appointmentDate)
         {
@@ -59,8 +62,10 @@ namespace BookingUpForBeauty
         /// Input: new DateTime(2019, 03, 29, 15, 0, 0)
         /// Output: true
         /// </summary>
-        /// <param name="appointmentDate"></param>
-        /// <returns><c>bool</c></returns> true if time is in the afteroon otherwise false.
+        /// <param name="appointmentDateDescription">A string description of the date in time
+        /// </param>
+        /// <returns><c>bool</c>true if time is in the afteroon otherwise false.
+        /// </returns> 
         /// <exception cref="NotImplementedException"></exception>
         public static bool IsAfternoonAppointment(DateTime appointmentDate)
         {
@@ -74,8 +79,8 @@ namespace BookingUpForBeauty
         /// Input: new DateTime(2019, 03, 29, 15, 0, 0)
         /// Output: "You have an appointment on 29/3/2019 3:00:00 PM."
         /// </summary>
-        /// <param name="appointmentDate"></param> a valid instance of <c>DateTime</c>
-        /// <returns><c>string</c></returns> describing the date and time of the appointment.
+        /// <param name="appointmentDate"> a valid instance of <c>DateTime</c></param> 
+        /// <returns><c>string</c> describing the date and time of the appointment.</returns> 
         /// <exception cref="NotImplementedException"></exception>
         public static string Description(DateTime appointmentDate)
         {
