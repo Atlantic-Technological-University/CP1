@@ -24,7 +24,13 @@ Console.WriteLine("Monday has the numeric value of {0}",
 Console.WriteLine("Wednesday has the numeric value of {0}", 
     Convert.ToInt32(Days.Wednesday));
 
-Console.WriteLine(Days.Weekend);
+Console.WriteLine(MeetingsDays.Weekend);
 
-Days meetingDays = Days.Monday | Days.Wednesday | Days.Friday;
+MeetingsDays meetingDays = MeetingsDays.Monday | MeetingsDays.Wednesday | MeetingsDays.Friday;
 Console.WriteLine(meetingDays);
+
+bool isMeetingOnWednesday = (meetingDays & MeetingsDays.Wednesday) == MeetingsDays.Wednesday;
+Console.WriteLine($"Is there a meeting on a Wedesay: {isMeetingOnWednesday}");
+
+bool isTodayWeekend = (MeetingsDays.Thursday == MeetingsDays.Weekend);
+Console.WriteLine($"Is it the weekend yet? : {isTodayWeekend}");

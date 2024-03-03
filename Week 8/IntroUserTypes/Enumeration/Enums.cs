@@ -9,10 +9,10 @@ namespace Enumeration
     // precede namespace and type declarations."
 
 
-    //enum Days
-    //{
-    //    Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
-    //}
+    enum Days
+    {
+        Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+    }
 
     // enum Days default values
     //enum Days
@@ -28,7 +28,7 @@ namespace Enumeration
 
     // Enum days with bit flags
     [Flags]
-    public enum Days
+    public enum MeetingsDays
     {
         None = 0b_0000_0000,  // 0
         Monday = 0b_0000_0001,  // 1
@@ -56,7 +56,7 @@ namespace Enumeration
         OK = 200,
         Found = 302,
         BadRequest = 400,
-        Unauthorised = 4010,
+        Unauthorised = 401,
         Forbidden = 403,
         NotFound = 404
     }

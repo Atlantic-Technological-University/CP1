@@ -7,15 +7,31 @@ namespace Structures
     // A simple structure to store the x and y position of something.
     public struct Coords
     {
+
+        // Fields are internal variables that an instance of the structure stores
+
+        /// <summary>
+        /// Each instance of the Coords type stores an x and a y position of type double
+        /// </summary>
         public double _xPos;
         public double _yPos;
 
+        /// <summary>
+        /// Coords is a special method called a constructor. It is used to create an instance
+        /// of the Coords structure.
+        /// </summary>
+        /// <param name="x">a value of type <c>double</c> that stores the x coordinate component</param>
+        /// <param name="x">a value of type <c>double</c> that stores the y coordinate component</param>
         public Coords(double x, double y)
         {
             _xPos = x;
             _yPos = y;
         }
 
+        /// <summary>
+        /// The ToString overrides the base ToString implementation provided by the System.Object 
+        /// </summary>
+        /// <returns>An interpolated string with the x and y coordinates.</returns>
         public override string ToString()
         {
             return $"({_xPos}, {_yPos})";
@@ -24,7 +40,8 @@ namespace Structures
 
     // Define a simple structure that stores screen coordinates 
     // This struct uses Properties instead of fields
-    public readonly struct CoordsReadOnly
+    //public readonly struct CoordsReadOnly
+    public struct CoordsReadOnly
     {
         public CoordsReadOnly(double x, double y)
         {
@@ -32,9 +49,10 @@ namespace Structures
             Y = y;
         }
         // Property called X that is read only
+        //public double X { get; init; }
         public double X { get; init; }
         public double Y { get; init; }
-        public override string ToString()
+        public override readonly string ToString()
         {
             return $"({X}, {Y})";
         }
