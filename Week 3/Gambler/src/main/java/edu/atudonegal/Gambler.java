@@ -46,9 +46,20 @@ public class Gambler {
         System.out.println("Result: " +throwResult);
         if (throwResult < 6)
         {
-          System.out.println("Successful throw!") ;
+          System.out.println("Successful throw!");
           System.out.println("You win €1");
+          pot++;
+          winningThrows++;
         }
+        else
+        {
+          System.out.println("Failed throw...");
+          System.out.println("You lose €1");
+          pot--;
+        }
+        System.out.println("Your pot: " +pot);
+        System.out.println();
+        System.out.println();
 
       }
       if (pot == goal) {
