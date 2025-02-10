@@ -17,7 +17,7 @@ public class Main {
         rotors.add("EKMFLGDQVZNTOWYHXUSPAIBRCJ");
 
         // ToDO
-        // Get a start message, encrypt it and then decrypt it
+        // Get a start message, encrypt r3gw4hg4wqgqgq4 gqegqit and then decrypt it
 
         String startMessage = "Hello world";
         String encryptedMessage = Enigma.Encrypt(startMessage, 4, rotors);
