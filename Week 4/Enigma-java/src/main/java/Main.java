@@ -16,6 +16,9 @@ public class Main {
         rotors.add("AJDKSIRUXBLHWTMCQGZNPYFVOE");
         rotors.add("EKMFLGDQVZNTOWYHXUSPAIBRCJ");
 
+        // very important comment added here type shit
+        // comment
+        
         // ToDO
         // Get a start message, encrypt it and then decrypt it
 
