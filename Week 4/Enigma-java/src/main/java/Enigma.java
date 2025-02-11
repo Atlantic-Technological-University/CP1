@@ -103,7 +103,39 @@ public final class Enigma {
         // 2. Apply the CAESAR shift
         // 3. Return the decrypted string
 
+<<<<<<< DecrptionBranch
         return DencytpedMessage;
+=======
+        String DecryptedMessage = "";
+        message = message.toUpperCase();
+        String newMessage  = "";
+        int index = 0;
+        String regAl = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        for(int x = 0;x<rotors.size();x--)
+        {
+            String rotor = rotors.get(x);
+            newMessage = "";
+            for(int y = 0;y<message.length();y--)
+            {
+                
+                index = regAl.indexOf(message.substring(y,y+1));
+                if(index != -1)
+                {
+                    newMessage = newMessage + rotor.charAt(index);
+                }
+                else{
+                    newMessage = newMessage + " ";
+                }
+                
+            }
+            DecryptedMessage = newMessage;
+        }
+
+
+        // This is going to be amazing
+
+        return DecryptedMessage;
+>>>>>>> main
 
     }
 }
