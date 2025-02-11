@@ -5,9 +5,7 @@ import java.io.*;
 public class Main {
     public static void main(String[] args)
     {
-        // Obtain a reference to the console
         Console con = System.console();
-
         System.out.println("Hello world");
         // List of rotors to map characters. Spaces in the rotor strings should be ignored.
         List<String> rotors = new ArrayList<String>();
@@ -18,7 +16,7 @@ public class Main {
         // ToDO
         // Get a start message, encrypt it and then decrypt it
 
-        String startMessage = "Hello world";
+        String startMessage = "This is the ENIGMA encrypt and decrypt program";
         String encryptedMessage = Enigma.Encrypt(startMessage, 4, rotors);
         System.out.println("The encrypted message is: " + encryptedMessage);
 
