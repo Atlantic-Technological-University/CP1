@@ -75,10 +75,10 @@ public final class Enigma {
             for(int y = 0;y<message.length();y++)
             {
                 
-                index = rotor.indexOf(message.substring(y,y+1));
+                index = regAl.indexOf(message.substring(y,y+1));
                 if(index != -1)
                 {
-                    newMessage = newMessage + regAl.charAt(index);
+                    newMessage = newMessage + rotor.charAt(index);
                 }
                 else{
                     newMessage = newMessage + " ";
