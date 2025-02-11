@@ -11,6 +11,7 @@ public class Main {
         System.out.println("Hello world");
         // List of rotors to map characters. Spaces in the rotor strings should be ignored.
         List<String> rotors = new ArrayList<String>();
+        
         rotors.add("BDFHJLCPRTXVZNYEIWGAKMUSQO");
         rotors.add("AJDKSIRUXBLHWTMCQGZNPYFVOE");
         rotors.add("EKMFLGDQVZNTOWYHXUSPAIBRCJ");
