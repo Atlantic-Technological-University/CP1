@@ -10,6 +10,10 @@ public final class Enigma {
         // TODO - Implement the Encrypt method
         // Steps in brief
         // 1. Apply the CAESAR shift using the increment number
+        //comment
+
+
+
         // 2. For each rotor in the list rotors
         String EncytpedMessage = "";
         message = message.toUpperCase();
