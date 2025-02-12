@@ -38,6 +38,28 @@ public class Gambler {
       // Game logic
       while (pot > 0 && pot < goal) {
         // TO DO - Implement game logic
+        ++bets;
+        System.out.println("Bet " +bets);
+        System.out.println("Simulating throw...");
+        System.out.println("...");
+        int throwResult = simulateThrow();
+        System.out.println("Result: " +throwResult);
+        if (throwResult < 6)
+        {
+          System.out.println("Successful throw!");
+          System.out.println("You win €1");
+          pot++;
+          winningThrows++;
+        }
+        else
+        {
+          System.out.println("Failed throw...");
+          System.out.println("You lose €1");
+          pot--;
+        }
+        System.out.println("Your pot: " +pot);
+        System.out.println();
+        System.out.println();
 
       }
       if (pot == goal) {
@@ -84,7 +106,7 @@ public class Gambler {
    */
   public static int getGoal() {
     Scanner scan = new Scanner(System.in);
-    System.out.print("How much is your starting bankroll? €: ");
+    System.out.print("How much is your goal? €: ");
     return scan.nextInt();
   }
 
@@ -96,7 +118,7 @@ public class Gambler {
   public static int simulateThrow() {
 
     // TODO
-    //Random randomNumber = new Random();
+    Random randomNumber = new Random();
     int randomNum = ThreadLocalRandom.current().nextInt(2, 12 + 1);
     //return randomNumber.nextInt(13);
     return randomNum;
