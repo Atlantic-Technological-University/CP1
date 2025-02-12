@@ -28,7 +28,33 @@ public final class Enigma {
         // 2. Apply the CAESAR shift
         // 3. Return the decrypted string
 
-        return "Implement the decrypt";
+        char[] decryptedMessage = message.toUpperCase().toCharArray();
 
+            for (int i = rotors.size() - 1; i >= 0; i--) {
+                String rotor = rotors.get(i);
+
+                for (int j = 0; j < decryptedMessage.length; j++) {
+                    char currentChar = decryptedMessage[j];
+                    
+                    if (currentChar >= 'A' && currentChar <= 'Z') {
+                        int index = rotor.indexOf(currentChar);
+                        
+                        if (index != -1) {
+                            decryptedMessage[j] = (char) ('A' + index);
+                            }
+                    }
+                }
+            }
+
+            for (int i = 0; i < decryptedMessage.length; i++) {
+                char currentChar = decryptedMessage[i];
+
+                if (currentChar != ' ') {
+                    int shifted = (currentChar - 'A' - incrementNumber + 26) % 26;
+                    decryptedMessage[i] = (char) ('A' + shifted);
+                }
+            }
+
+        return new String(decryptedMessage);
     }
 }
