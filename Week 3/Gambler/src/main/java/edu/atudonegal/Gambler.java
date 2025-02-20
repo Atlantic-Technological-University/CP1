@@ -23,7 +23,9 @@ public class Gambler {
    */
   public static void main(String[] args) {
 
-    int bets = 0;
+    System.out.print("Hello world");
+
+    /*int bets = 0;
     int gameWins = 0;
     int winningThrows = 0;
 
@@ -60,7 +62,7 @@ public class Gambler {
     System.out.println("Number of throws: " + bets);
     System.out.println("Number of winning throws: " + winningThrows);
     System.out.println("Percentage wins : " + 100.0 * winningThrows / bets);
-    System.out.println("Winning games : " + gameWins);
+    System.out.println("Winning games : " + gameWins);*/
 
 
   }
