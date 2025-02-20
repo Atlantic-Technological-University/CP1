@@ -1,5 +1,7 @@
 ﻿namespace HelloWorld2
 {
+    // This is an example of a C# program that does not use top level statements and instead uses
+    // or rather exposes a traditional Main method to the developer.
     static class Program
     {
         static void Main(string[] args)
