@@ -135,7 +135,7 @@ namespace Structures
         // Required keyword forces client to initialise 
 
         //public required string Name { get; set; } //required only in > C# 11 .NET 7
-        public string Name { get; set; }
+        public required string Name { get; set; }
         public decimal Price { get; set; }
     }
 }
