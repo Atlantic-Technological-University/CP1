@@ -25,7 +25,7 @@ public class Gambler {
 
     System.out.print("Hello world");
 
-    /*int bets = 0;
+    int bets = 0;
     int gameWins = 0;
     int winningThrows = 0;
 
@@ -39,7 +39,14 @@ public class Gambler {
 
       // Game logic
       while (pot > 0 && pot < goal) {
-        // TO DO - Implement game logic
+        int result = simulateThrow();
+        bets++;
+        if (result > 6) {
+          pot--;
+        } else {
+          winningThrows++;
+          pot++;
+        }
 
       }
       if (pot == goal) {
@@ -47,8 +54,6 @@ public class Gambler {
         System.out.print(
             "\n\nCongratulations, you beat Gambler's Ruin. Would you like to try your luck again?"
                 + " y/n: ");
-        pot = 0;
-
       } else {
         System.out.print("\n\nToo bad, you lost to Gambler's Ruin. "
             + "Would you like to try your luck again? y/n: ");
@@ -62,12 +67,12 @@ public class Gambler {
     System.out.println("Number of throws: " + bets);
     System.out.println("Number of winning throws: " + winningThrows);
     System.out.println("Percentage wins : " + 100.0 * winningThrows / bets);
-    System.out.println("Winning games : " + gameWins);*/
+    System.out.println("Winning games : " + gameWins);
 
 
   }
 
-  /**
+  /*
    * Returns an amount of money the player starts with in their pot.
    *
    * @return the amount of money the player starts the game with
@@ -86,21 +91,19 @@ public class Gambler {
    */
   public static int getGoal() {
     Scanner scan = new Scanner(System.in);
-    System.out.print("How much is your starting bankroll? €: ");
+    System.out.print("What is your goal? €: ");
     return scan.nextInt();
   }
 
   /**
    * Returns the value of two dice being thrown.
    *
-   * @return a number in the range [2..12] the result of throwing to dice
+   * @return a number in the range [2..12] the result of throwing two dice
    */
   public static int simulateThrow() {
-
-    // TODO
-    //Random randomNumber = new Random();
-    int randomNum = ThreadLocalRandom.current().nextInt(2, 12 + 1);
-    //return randomNumber.nextInt(13);
-    return randomNum;
+    Random randomNumberGenerator = new Random();
+    int num1 = randomNumberGenerator.nextInt(1,7);
+    int num2 = randomNumberGenerator.nextInt(1,7);
+    return num1+num2;
   }
 }
