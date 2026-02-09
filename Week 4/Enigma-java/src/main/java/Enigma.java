@@ -22,11 +22,15 @@ public final class Enigma {
     {
         // TODO - Implement the Decrypt method
 
-        // Steps in brief
-        // 1. For each rotor in the list rotors, starting with the last rotor
-        //  1.1 Translate the message using the rotor
-        // 2. Apply the CAESAR shift
-        // 3. Return the decrypted string
+        // for each rotor, starting with the last one
+        for (int i=rotors.size()-1; i>0; i--)
+        {
+
+        }
+
+        // John stuff
+            // Apply the CAESAR shift
+            // Return the decrypted string
 
         return "Implement the decrypt";
 
