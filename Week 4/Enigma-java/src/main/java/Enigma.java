@@ -20,6 +20,17 @@ public final class Enigma {
 
     public static String Decrypt(String message, int incrementNumber, List<String> rotors)
     {
+       
+        return(decryptRotors(message, rotors));
+        
+        // John stuff
+            // Apply the CAESAR shift
+            // Return the decrypted string
+
+    }
+
+    public static String decryptRotors(String message, List<String> rotors)
+    {
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuilder m = new StringBuilder(message.toUpperCase());
 
@@ -38,9 +49,5 @@ public final class Enigma {
         }
 
         return m.toString();
-        // John stuff
-            // Apply the CAESAR shift
-            // Return the decrypted string
-
     }
 }
