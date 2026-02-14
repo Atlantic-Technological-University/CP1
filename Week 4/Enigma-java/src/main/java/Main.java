@@ -20,6 +20,18 @@ public class Main {
         // Get a start message, encrypt it and then decrypt it
 
         String startMessage = "Hello world";
+
+        // char b = startMessage.charAt(0);
+
+        // char letters [] = new char [120];
+
+        // letters = startMessage.toCharArray();
+
+        // for (char c : letters) {
+        //     System.out.println(c);
+        // }
+
+        // System.out.println(b);
         String encryptedMessage = Enigma.Encrypt(startMessage, 4, rotors);
         System.out.println("The encrypted message is: " + encryptedMessage);
 
