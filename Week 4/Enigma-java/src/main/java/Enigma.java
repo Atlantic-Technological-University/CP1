@@ -7,6 +7,12 @@ import java.util.List;
 
 public final class Enigma {
 
+    private Enigma()
+    {
+
+    }
+
+    public static String encrypt(String message, int incrementNumber,List<String> rotors ){
     public static String shiftCAESAR(String message, int incrementNumber){
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -110,17 +116,45 @@ public final class Enigma {
     }
 
 
-    public static String Decrypt(String message, int incrementNumber, List<String> rotors)
+    public static String decrypt(String message, int incrementNumber, List<String> rotors)
     {
-        // TODO - Implement the Decrypt method
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        StringBuilder m = new StringBuilder(message.toUpperCase());
 
-        // Steps in brief
-        // 1. For each rotor in the list rotors, starting with the last rotor
-        //  1.1 Translate the message using the rotor
-        // 2. Apply the CAESAR shift
-        // 3. Return the decrypted string
+        // reverse rotors
+        for (int i=rotors.size()-1; i>=0; i--)    // for each rotor, starting with the last one
+        {
+            for (int j=0; j<m.length(); j++) // for each character in the message
+            {
+                char currentChar = m.charAt(j);
+                if (alphabet.indexOf(currentChar) != -1) // if the character is in the alphabet
+                {
+                    int position=rotors.get(i).indexOf(currentChar);
+                    char translatedCharacter = alphabet.charAt(position);
+                    m.setCharAt(j, translatedCharacter);
+                }
+            }
+        }
 
-        return "Implement the decrypt";
+        // reverse caesar shift
+        for (int i=0; i<m.length(); i++)
+        {
+            char currentChar = m.charAt(i);
+            if (alphabet.indexOf(currentChar) != -1)
+            {
+                int position = alphabet.indexOf(currentChar);
+                int shiftedPosition=position-incrementNumber-i;
+
+                // wrap back to start of alphabet
+                if (shiftedPosition<0)
+                    shiftedPosition+=25;
+                
+                char replacementChar = alphabet.charAt(shiftedPosition);
+                m.setCharAt(i, replacementChar);
+            }
+        }
+
+        return m.toString();
 
     }
 }
