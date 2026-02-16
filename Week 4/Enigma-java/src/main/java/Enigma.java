@@ -7,17 +7,21 @@ import java.util.List;
 
 public final class Enigma {
 
+    private static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    
     private Enigma()
     {
 
     }
 
     public static String encrypt(String message, int incrementNumber,List<String> rotors ){
+        return rotorsShift(shiftCAESAR(message, incrementNumber), rotors);
+    }
+
     public static String shiftCAESAR(String message, int incrementNumber){
-        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         char [] decodedWord = message.toUpperCase().toCharArray();
-        char [] shiftCAESAR = alphabet.toCharArray();
+        char [] shiftCAESAR = ALPHABET.toCharArray();
 
         for (int i = 0; i < decodedWord.length; i++) {
             int shiftInLettersCAESAR = 0;
@@ -59,8 +63,7 @@ public final class Enigma {
         ArrayList<Character> rotor = new ArrayList<>();
 
         // Alphabet array
-        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        char [] alphabetArray = alphabet.toCharArray();
+        char [] alphabetArray = ALPHABET.toCharArray();
         ArrayList<Character> alphabetCharacters = new ArrayList<>();
 
         for (Character c : alphabetArray) {
@@ -99,26 +102,8 @@ public final class Enigma {
         return bld.toString();
     }
 
-
-    public static String Encrypt(String message, int incrementNumber,List<String> rotors ){
-        // TODO - Implement the Encrypt method
-        // Steps in brief
-
-        // 1. Apply the CAESAR shift using the increment number
-        // Method shiftCAESAR was created
-
-        // 2. For each rotor in the list rotors
-        //  2.1 Translate the message using the rotor
-        // 3. Return the encrypted string
-        // Method rotorsShift was created - in case it was not done
-
-        return rotorsShift(shiftCAESAR(message, incrementNumber), rotors);
-    }
-
-
     public static String decrypt(String message, int incrementNumber, List<String> rotors)
     {
-        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuilder m = new StringBuilder(message.toUpperCase());
 
         // reverse rotors
@@ -127,10 +112,10 @@ public final class Enigma {
             for (int j=0; j<m.length(); j++) // for each character in the message
             {
                 char currentChar = m.charAt(j);
-                if (alphabet.indexOf(currentChar) != -1) // if the character is in the alphabet
+                if (ALPHABET.indexOf(currentChar) != -1) // if the character is in the alphabet
                 {
                     int position=rotors.get(i).indexOf(currentChar);
-                    char translatedCharacter = alphabet.charAt(position);
+                    char translatedCharacter = ALPHABET.charAt(position);
                     m.setCharAt(j, translatedCharacter);
                 }
             }
@@ -140,16 +125,16 @@ public final class Enigma {
         for (int i=0; i<m.length(); i++)
         {
             char currentChar = m.charAt(i);
-            if (alphabet.indexOf(currentChar) != -1)
+            if (ALPHABET.indexOf(currentChar) != -1)
             {
-                int position = alphabet.indexOf(currentChar);
+                int position = ALPHABET.indexOf(currentChar);
                 int shiftedPosition=position-incrementNumber-i;
 
                 // wrap back to start of alphabet
                 if (shiftedPosition<0)
-                    shiftedPosition+=25;
+                    shiftedPosition+=26;
                 
-                char replacementChar = alphabet.charAt(shiftedPosition);
+                char replacementChar = ALPHABET.charAt(shiftedPosition);
                 m.setCharAt(i, replacementChar);
             }
         }
