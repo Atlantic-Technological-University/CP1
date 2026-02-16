@@ -19,8 +19,8 @@ public class Main {
         // ToDO
         // Get a start message, encrypt it and then decrypt it
 
-        String startMessage = "ABCD";
-        // String startMessage = "Hello World";
+        // String startMessage = "ABCD";
+        String startMessage = "Hello World";
 
 
         
