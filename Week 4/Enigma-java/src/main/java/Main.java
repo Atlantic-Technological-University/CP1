@@ -20,8 +20,5 @@ public class Main {
 
         String decryptedMessage = Enigma.decrypt(encryptedMessage, 4, rotors);
         System.out.println("The decrypted message is: " + decryptedMessage);
-
-        String exampleStr="KFDI";
-        System.out.println("Decrypted example is "+ Enigma.decrypt(exampleStr, 4, rotors));
     }
 }
