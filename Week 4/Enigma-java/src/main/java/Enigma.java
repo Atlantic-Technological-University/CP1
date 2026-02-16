@@ -3,68 +3,59 @@
 /// Description: Add a useful description of this file
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public final class Enigma {
 
-    public static String CAESARshift(String message, int incrementNumber){
+    public static String shiftCAESAR(String message, int incrementNumber){
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        // char CAESARShift [] = new char[26];
-        // char decodedWord [] = {};
 
         char [] decodedWord = message.toUpperCase().toCharArray();
-        char [] CAESARShift = alphabet.toCharArray();
+        char [] shiftCAESAR = alphabet.toCharArray();
 
         for (int i = 0; i < decodedWord.length; i++) {
-            int CAESERShiftInLetters = 0;
+            int shiftInLettersCAESAR = 0;
 
-            // Check if the character is spaceBar or not, if yes, skip CAESARShift 
+            // Check if the character is spaceBar or not, if yes, skip shiftCAESAR 
             String decodedWordIsSpaceBar = new StringBuilder().append(decodedWord[i]).toString();
-            for (int j = 0; j < CAESARShift.length; j++) {
-                if (decodedWordIsSpaceBar.contains(" ")) {
-                    break;
-                }
-
-                // If character is NOT spaceBar, then do CAESARShift
-                if (decodedWord[i] == CAESARShift[j]) {
-                    CAESERShiftInLetters = j+incrementNumber+i;
-                    // System.out.println(j);
+            for (int j = 0; j < shiftCAESAR.length; j++) {
+                // If character is NOT spaceBar, then do shiftCAESAR
+                if (decodedWord[i] == shiftCAESAR[j] && !decodedWordIsSpaceBar.contains(" ")) {
+                    shiftInLettersCAESAR = j+incrementNumber+i;
                     break;
                 }
             }
             
 
-            if(CAESERShiftInLetters > 26){
-                CAESERShiftInLetters -= 26;
+            if(shiftInLettersCAESAR > 26){
+                shiftInLettersCAESAR -= 26;
             }
             
             if (!decodedWordIsSpaceBar.contains(" ")) {
-                decodedWord[i] = CAESARShift[CAESERShiftInLetters];
+                decodedWord[i] = shiftCAESAR[shiftInLettersCAESAR];
             }
         }
 
-        String encryptedWord = "";
+        StringBuilder bld = new StringBuilder();
         for (char c : decodedWord) {
-            encryptedWord += c;
+            bld.append(c);
         }
 
-        return encryptedWord;
+        return bld.toString();
     }
 
 
-    public static String RotorsShift(String message, int incrementNumber, List<String> rotors){
+    public static String rotorsShift(String message, List<String> rotors){
         // For test purpose array below
-        // char [] CAESARAppliedWord = {'H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D'};
-        char [] CAESARAppliedWord = message.toUpperCase().toCharArray();
+        char [] wordWithAppliedCAESAR = message.toUpperCase().toCharArray();
         
         // Actual rotor array used to encode
-        ArrayList<Character> rotor = new ArrayList<Character>();
+        ArrayList<Character> rotor = new ArrayList<>();
 
         // Alphabet array
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         char [] alphabetArray = alphabet.toCharArray();
-        ArrayList<Character> alphabetCharacters = new ArrayList<Character>();
+        ArrayList<Character> alphabetCharacters = new ArrayList<>();
 
         for (Character c : alphabetArray) {
             alphabetCharacters.add(c);
@@ -81,15 +72,10 @@ public final class Enigma {
             }
 
             // Apply rotors encoding
-            for(int j = 0; j < CAESARAppliedWord.length; j++){
-                // System.out.println(alphabetCharacters);
-                if(CAESARAppliedWord[j] == ' '){
-                    continue;
-                }
-                else {
-                    int shift = alphabetCharacters.indexOf(CAESARAppliedWord[j]);
-                    // System.out.print(rotor.get(shift) + ", ");
-                    CAESARAppliedWord[j] = rotor.get(shift);
+            for(int j = 0; j < wordWithAppliedCAESAR.length; j++){
+                if(wordWithAppliedCAESAR[j] != ' '){
+                    int shift = alphabetCharacters.indexOf(wordWithAppliedCAESAR[j]);
+                    wordWithAppliedCAESAR[j] = rotor.get(shift);
                 }
             }
 
@@ -98,13 +84,13 @@ public final class Enigma {
         }
 
         // Assemble encoded word
-        String encodedWord = "";
-        for (char  c : CAESARAppliedWord) {
-            encodedWord += c;
+        StringBuilder bld = new StringBuilder();
+        for (char  c : wordWithAppliedCAESAR) {
+            bld.append(c);
         }
         
 
-        return encodedWord;
+        return bld.toString();
     }
 
 
@@ -113,14 +99,14 @@ public final class Enigma {
         // Steps in brief
 
         // 1. Apply the CAESAR shift using the increment number
-        // Method CAESARshift was created
+        // Method shiftCAESAR was created
 
         // 2. For each rotor in the list rotors
         //  2.1 Translate the message using the rotor
         // 3. Return the encrypted string
-        // Method RotorsShift was created - in case it was not done
+        // Method rotorsShift was created - in case it was not done
 
-        return RotorsShift(CAESARshift(message, incrementNumber), incrementNumber, rotors);
+        return rotorsShift(shiftCAESAR(message, incrementNumber), rotors);
     }
 
 
