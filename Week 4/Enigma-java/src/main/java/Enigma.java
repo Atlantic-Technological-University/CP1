@@ -6,7 +6,12 @@ import java.util.List;
 
 public final class Enigma {
 
-    public static String Encrypt(String message, int incrementNumber,List<String> rotors ){
+    private Enigma()
+    {
+
+    }
+
+    public static String encrypt(String message, int incrementNumber,List<String> rotors ){
         // TODO - Implement the Encrypt method
         // Steps in brief
         // 1. Apply the CAESAR shift using the increment number
@@ -18,36 +23,45 @@ public final class Enigma {
     }
 
 
-    public static String Decrypt(String message, int incrementNumber, List<String> rotors)
-    {
-       
-        return(decryptRotors(message, rotors));
-        
-        // TODO
-            // Apply the CAESAR shift
-            // Return the decrypted string
-
-    }
-
-    public static String decryptRotors(String message, List<String> rotors)
+    public static String decrypt(String message, int incrementNumber, List<String> rotors)
     {
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuilder m = new StringBuilder(message.toUpperCase());
 
-        // for each rotor, starting with the last one
-        for (int i=rotors.size()-1; i>=0; i--)
+        // reverse rotors
+        for (int i=rotors.size()-1; i>=0; i--)    // for each rotor, starting with the last one
         {
             for (int j=0; j<m.length(); j++) // for each character in the message
             {
-                if (alphabet.indexOf(m.charAt(j)) != -1) // if the character is in the alphabet
+                char currentChar = m.charAt(j);
+                if (alphabet.indexOf(currentChar) != -1) // if the character is in the alphabet
                 {
-                    int position=rotors.get(i).indexOf(m.charAt(j));
+                    int position=rotors.get(i).indexOf(currentChar);
                     char translatedCharacter = alphabet.charAt(position);
                     m.setCharAt(j, translatedCharacter);
                 }
             }
         }
 
+        // reverse caesar shift
+        for (int i=0; i<m.length(); i++)
+        {
+            char currentChar = m.charAt(i);
+            if (alphabet.indexOf(currentChar) != -1)
+            {
+                int position = alphabet.indexOf(currentChar);
+                int shiftedPosition=position-incrementNumber-i;
+
+                // wrap back to start of alphabet
+                if (shiftedPosition<0)
+                    shiftedPosition+=25;
+                
+                char replacementChar = alphabet.charAt(shiftedPosition);
+                m.setCharAt(i, replacementChar);
+            }
+        }
+
         return m.toString();
+
     }
 }
