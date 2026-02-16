@@ -19,8 +19,10 @@ public class Main {
         // ToDO
         // Get a start message, encrypt it and then decrypt it
 
-        String startMessage = "Hello world";
+        String startMessage = "Hello World";
+        
         String encryptedMessage = Enigma.Encrypt(startMessage, 4, rotors);
+
         System.out.println("The encrypted message is: " + encryptedMessage);
 
         String decryptedMessage = Enigma.Decrypt(encryptedMessage, 4, rotors);
