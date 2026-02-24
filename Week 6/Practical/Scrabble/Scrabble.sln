@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36930.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scrabble", "Scrabble\Scrabble.csproj", "{838BD41F-2221-460A-B212-096EEB489976}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrabbleTests", "ScrabbleTests\ScrabbleTests.csproj", "{2068B1D0-00B5-4E12-BE7B-FF1DAF627B9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{838BD41F-2221-460A-B212-096EEB489976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{838BD41F-2221-460A-B212-096EEB489976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{838BD41F-2221-460A-B212-096EEB489976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{838BD41F-2221-460A-B212-096EEB489976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2068B1D0-00B5-4E12-BE7B-FF1DAF627B9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2068B1D0-00B5-4E12-BE7B-FF1DAF627B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2068B1D0-00B5-4E12-BE7B-FF1DAF627B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2068B1D0-00B5-4E12-BE7B-FF1DAF627B9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E15D52B-A6A4-4CFC-8599-BB4532E0E42A}
+	EndGlobalSection
+EndGlobal
